@@ -26,7 +26,7 @@ const port = process.env.PORT
 app.use(express.json())
 // app.use(cors(corsOptions));
 app.use(cors({
-    origin: 'http://localhost:3000',
+    origin: 'https://travel-verse-mern-frontend.onrender.com',
     credentials: true, // This is crucial!
 }));
 app.use(express.urlencoded({ extended: true }));
