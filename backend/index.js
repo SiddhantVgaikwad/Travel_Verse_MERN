@@ -8,19 +8,13 @@ import userRoute from './routes/userRoute.js'
 import authRoute from './routes/authRoute.js'
 import reviewRoute from './routes/reviewRoute.js'
 import bookingRoute from './routes/bookingRoute.js'
-import path from "path"
+
 //
 
 
 dotenv.config();
 const app = express();
 const port = process.env.PORT
-const _dirname = path.resolve();
-
-
-
-
- 
 
 
 //middleware
@@ -40,11 +34,6 @@ app.use('/api/v1/booking', bookingRoute)
 
 //
 
-app.use(express.static(path.join(process.cwd(), _dirname, './frontend/build')));
-
-app.get('*', (req, res) => {
-  res.sendFile(path.join(process.cwd(), _dirname, './frontend', 'build', 'index.html'));
-});
 
 
 app.listen(port, () => {
