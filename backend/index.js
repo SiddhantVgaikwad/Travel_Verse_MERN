@@ -8,7 +8,7 @@ import userRoute from './routes/userRoute.js'
 import authRoute from './routes/authRoute.js'
 import reviewRoute from './routes/reviewRoute.js'
 import bookingRoute from './routes/bookingRoute.js'
-
+import path from "path"
 //
 
 
@@ -39,7 +39,11 @@ app.use('/api/v1/booking', bookingRoute)
 
 //
 
+app.use(express.static(path.join(__dirname, 'build')));
 
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
 
 
 app.listen(port, () => {
