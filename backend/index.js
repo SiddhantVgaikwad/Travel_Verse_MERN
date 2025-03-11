@@ -40,10 +40,10 @@ app.use('/api/v1/booking', bookingRoute)
 
 //
 
-app.use(express.static(path.join(process.cwd(), _dirname, '/frontend/build')));
+app.use(express.static(path.join(process.cwd(), _dirname, './frontend/build')));
 
 app.get('*', (req, res) => {
-  res.sendFile(path.join(process.cwd(), _dirname, 'frontend', 'build', 'index.html'));
+  res.sendFile(path.join(process.cwd(), _dirname, './frontend', 'build', 'index.html'));
 });
 
 
