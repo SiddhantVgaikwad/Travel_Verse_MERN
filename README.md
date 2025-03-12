@@ -99,12 +99,6 @@ Cloudinary Account
 git clone https://github.com/SiddhantVgaikwad/Travel_Verse_MERN.git
 
 2.Configure environment (.env):
-# Server
-MONGO_URI=mongodb+srv://...
-JWT_SECRET=your_jwt_secret
-CLOUDINARY_URL=cloudinary://...
-GOOGLE_CLIENT_ID=your_google_id
-MAIL_USER=your_email@service.com
 
 3.Install & Run: cd client && npm install && npm start
 cd ../server && npm install && npm run dev
@@ -126,8 +120,3 @@ Push & Create PR
 MIT © Siddhant Gaikwad
 
 Crafted with ❤️ by Siddhant Gaikwad | Full Stack Developer
-
-
-
-
-
