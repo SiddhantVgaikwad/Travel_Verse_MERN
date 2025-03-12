@@ -8,8 +8,14 @@ import userRoute from './routes/userRoute.js'
 import authRoute from './routes/authRoute.js'
 import reviewRoute from './routes/reviewRoute.js'
 import bookingRoute from './routes/bookingRoute.js'
-import path from 'path'
+
 //
+import { dirname, join } from 'path';
+
+// Derive __dirname for ES modules
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
 
 
 dotenv.config();
@@ -33,11 +39,11 @@ app.use('/api/v1/review', reviewRoute)
 app.use('/api/v1/booking', bookingRoute)
 
 //
-app.use(express.static('build'));
+app.use(express.static(join(__dirname, 'build')));
 
-// Handle client-side routing
+// Handle client-side routing (serve index.html for all routes)
 app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, 'build', 'index.html'));
+  res.sendFile(join(__dirname, 'build', 'index.html'));
 });
 
 
