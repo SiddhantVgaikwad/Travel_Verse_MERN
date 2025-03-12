@@ -40,11 +40,12 @@ app.use('/api/v1/review', reviewRoute)
 app.use('/api/v1/booking', bookingRoute)
 
 //
-app.use(express.static(join(__dirname, 'build')));
+// Serve static files
+app.use(express.static(join(__dirname, '../frontend/build'))); // Adjust the path as needed
 
-// Handle client-side routing (serve index.html for all routes)
+// Handle client-side routing
 app.get('*', (req, res) => {
-  res.sendFile(join(__dirname, 'build', 'index.html'));
+  res.sendFile(join(__dirname, '../frontend/build', 'index.html')); // Adjust the path as needed
 });
 
 
