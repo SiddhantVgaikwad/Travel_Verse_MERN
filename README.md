@@ -5,7 +5,7 @@
 
 A full-featured travel platform offering secure bookings, personalized experiences, and comprehensive tour management.
 
-**Live Demo:** [Explore Now](#) <!-- Add your live URL here -->
+**Live Demo:** [Explore Now](https://travel-verse-mern-frontend.onrender.com/) <!-- Add your live URL here -->
 
 ![TravelVerse Interface](client/public/showcase.gif) <!-- Add your showcase GIF -->
 
