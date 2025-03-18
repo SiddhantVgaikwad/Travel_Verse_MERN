@@ -95,7 +95,7 @@ const Header = () => {
                         to="/register"
                         className="block py-2 px-4 font-medium text-center bg-green-600 hover:bg-green-500 active:bg-green-700 text-white no-underline rounded-lg shadow md:inline transition-colors duration-300"
                       >
-                        Sign in
+                        Sign up
                       </Link>
                     </li>
                   </>
